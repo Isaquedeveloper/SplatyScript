@@ -1,43 +1,44 @@
 =========== SplatyScript Language ===========
-SplatyScript, È uma linguagem de programaÁ„o
+SplatyScript, √© uma linguagem de programa√ß√£o
 interpretada e orientada-a-objetos com o 
-objetivo de ser f·cil de usar. Com poucas
-linhas de cÛdigo, È possÌvel criar um progra-
-ma completo e avanÁado.
-Vers„o: 0.1-Alpha
--- ATEN«√O --
-Esta È a primeira verÁ„o -- Bugs podem
+objetivo de ser f√°cil de usar. Com poucas
+linhas de c√≥digo, √© poss√≠vel criar um progra-
+ma completo e avan√ßado.
+Linguagem criada pela Traingames.
+Vers√£o: 0.1-Alpha
+-- ATEN√á√ÉO --
+Esta √© a primeira ver√ß√£o -- Bugs podem
 ocorrer.
--- Por favor, note que o SplatyScript È uma
+-- Por favor, note que o SplatyScript √© uma
 linguagem INTERPRETADA; Facilite a vida do
-interpretador evitando espaÁos desnescess·-
-rios e inclua espaÁos quando nescess·rio.
+interpretador evitando espa√ßos desnescess√°-
+rios e inclua espa√ßos quando nescess√°rio.
 =============================================
-Coment·rios devem iniciar com '#'.
+Coment√°rios devem iniciar com '#'.
 Exemplo:
-#Isso È um coment·rio.
+#Isso √© um coment√°rio.
 
 -- Ah, e um bug do SplatyScript:
 Quando um erro ocorre, o SplatyScript fala a linha que o erro ocorreu. Ignore est
 
-    Lista de comandos (Com nÌvel de xp)
+    Lista de comandos (Com n√≠vel de xp)
 
 -> Iniciante:
-print - Exibe um texto na tela. Exemplo: print Ol·%mundo! Obs: o '%' significa um espaÁo em branco (' ').
+print - Exibe um texto na tela. Exemplo: print Ol√°%mundo! Obs: o '%' significa um espa√ßo em branco (' ').
 println - Igual a print, soque gera uma nova linha no final.
-title - Define o tÌtulo do programa/janela.
-set_cursor_pos - Indica a posiÁ„o do cursor X Y. Exemeplo: set_cursor_pos 10 15.
-set_fore_color - Indica a cor do texto. A cor deve ser um n˙mero de 0 · 15(Cor de 4 bits/16 cores). Exemplo: set_fore_color 3
+title - Define o t√≠tulo do programa/janela.
+set_cursor_pos - Indica a posi√ß√£o do cursor X Y. Exemeplo: set_cursor_pos 10 15.
+set_fore_color - Indica a cor do texto. A cor deve ser um n√∫mero de 0 √° 15(Cor de 4 bits/16 cores). Exemplo: set_fore_color 3
 set_back_color - Igual a 'set_fore_color', soque dessa vez, a cor de fundo.
-set - Indica o valor de uma vari·vel. Exemplo: set minhaVar valor
-pause - Espera o usu·rio digitar um texto. ⁄til para botar no final, para que o programa n„o feche 'do nada'.
+set - Indica o valor de uma vari√°vel. Exemplo: set minhaVar valor
+pause - Espera o usu√°rio digitar um texto. √ötil para botar no final, para que o programa n√£o feche 'do nada'.
 io_make - Cria um arquivo/pasta. Exemplo: io_make file C:\Splaty\teste.txt TESTE_ARQUIVO
-io_read - LÍ um arquivo e passa o valor para uma vari·vel. Exemplo: io_read minhaVar C:\Splaty\Splaty.txt
+io_read - L√™ um arquivo e passa o valor para uma vari√°vel. Exemplo: io_read minhaVar C:\Splaty\Splaty.txt
 beep - Executa um 'Beep'.
 
--> MÈdio
+-> M√©dio
 import: Importa uma bibliotaca. Exemplo: import Lib.splat
-var - Cria uma vari·vel. Exemplo: 'var nome:tipo=valor'.  Tipos disponÌveis:
+var - Cria uma vari√°vel. Exemplo: 'var nome:tipo=valor'.  Tipos dispon√≠veis:
  - string
  - number
  - _array
@@ -46,53 +47,53 @@ var - Cria uma vari·vel. Exemplo: 'var nome:tipo=valor'.  Tipos disponÌveis:
 
 ================================|
 if e while:                     |
-if - verifica se uma condiÁ„o   |
-È verdadeira; Se sim, executa   |
-o que est· dentro. Ex:          |
+if - verifica se uma condi√ß√£o   |
+√© verdadeira; Se sim, executa   |
+o que est√° dentro. Ex:          |
 if (minhaVar == ABC)            |
-print …%igual.                  |
+print √â%igual.                  |
 end_if                          |
 while - Igual ao if, soque este |
-È um loop. Ex:                  |
+√© um loop. Ex:                  |
 while (meuNum > 5)              |
 calc meuNum - 1                 |
 end_while                       |
 ================================|
 
-calc - Executa c·lculos, para string, number ou generic. Exemplo: 'calc minhaVariavel + 2'
-.'minhaVariavel' ir· ter seu valor + 2. Operadores:
- + - Mais/AdiÁ„o
- - - Menos/SubtraÁ„o
- * - Vezes/MultiplicaÁ„o
- / - Divis„o
-function - Cria uma funÁ„o. Exemplo:
+calc - Executa c√°lculos, para string, number ou generic. Exemplo: 'calc minhaVariavel + 2'
+.'minhaVariavel' ir√° ter seu valor + 2. Operadores:
+ + - Mais/Adi√ß√£o
+ - - Menos/Subtra√ß√£o
+ * - Vezes/Multiplica√ß√£o
+ / - Divis√£o
+function - Cria uma fun√ß√£o. Exemplo:
  function Soma num1:number,num2:number
  var result:number=num1
  calc result + num2
  return result
  end
-*Para chamar funÁıes:
- Escreva o nome da funÁ„o com os argumentos (ex:Soma 1 4), ou use o comando 'call'.
+*Para chamar fun√ß√µes:
+ Escreva o nome da fun√ß√£o com os argumentos (ex:Soma 1 4), ou use o comando 'call'.
 
-call - Chama uma funÁ„o pelo nome, podendo ultilizar vari·veis. Ex:
+call - Chama uma fun√ß√£o pelo nome, podendo ultilizar vari√°veis. Ex:
 
- println Digite%o%nome%de%uma%funÁ„o:
+ println Digite%o%nome%de%uma%fun√ß√£o:
  var func:string=read
  call func
 
-ran - Gera um n˙mero aleatÛrio. Exemplo: 'ran 8 12 minhaVar'. No caso, ele gera um n˙mero aleatÛrio de 8 · 12, e bota o 
-valor na vari·vel 'minhaVar'.
-substring - 'Corta' uma string de um certo comeÁo, com um certo comprimento. Exemplo:
+ran - Gera um n√∫mero aleat√≥rio. Exemplo: 'ran 8 12 minhaVar'. No caso, ele gera um n√∫mero aleat√≥rio de 8 √° 12, e bota o 
+valor na vari√°vel 'minhaVar'.
+substring - 'Corta' uma string de um certo come√ßo, com um certo comprimento. Exemplo:
  #Observe os caracteres de str:
  #0123456
  #ABCDEFG
  var str:string=ABCDEFG
  var tmp:string=0
  substring str 2 5 tmp
- #2=startindex(comeÁo), 5=length(comprimento)
+ #2=startindex(come√ßo), 5=length(comprimento)
  println tmp
 
-->AvanÁado
+->Avan√ßado
 class - Cria uma classe. Exemplo:
  class MinhaClasse
 
@@ -105,13 +106,13 @@ der - Deriva de uma classe. Exemplo:
  class Classe2
  der Classe1
  end_class
-Agora a Classe2 ter· os mesmos atributos e funÁıes da Classe1, e mais os seus prÛprios.
+Agora a Classe2 ter√° os mesmos atributos e fun√ß√µes da Classe1, e mais os seus pr√≥prios.
 --------------------------------------------------------------------------------------------------
 Arrays:
 Veja como criar um array:
 var meu_array:_array=10
-*o valor do array(no caso 10), ser· o comprimento dele.
-@ - Para get ou set de um elemento de um array, usamos o @, depois o index(Ìndice).
+*o valor do array(no caso 10), ser√° o comprimento dele.
+@ - Para get ou set de um elemento de um array, usamos o @, depois o index(√≠ndice).
 Exemplo:
 
 set meu_array@0 Hello
@@ -123,56 +124,56 @@ println meu_array@1
 pause
 
 Criando instancias de classes:
-var inst‚ncia:Nome_da_classe=0
-Obs: Quando se cria uma inst‚ncia de uma classe, o valor da vari·vel da inst‚ncia n„o importa;pode ser qualquer valor.
-(Eu recomando '0' para deixar o cÛdigo mais organizado).
+var inst√¢ncia:Nome_da_classe=0
+Obs: Quando se cria uma inst√¢ncia de uma classe, o valor da vari√°vel da inst√¢ncia n√£o importa;pode ser qualquer valor.
+(Eu recomando '0' para deixar o c√≥digo mais organizado).
 
-Acessando atributos ou funcıes de uma inst‚ncia de classe:
-Para acessar atributos ou funcıes de uma inst‚ncia, use 'inst‚ncia.atributo_ou_funcao'.
+Acessando atributos ou func√µes de uma inst√¢ncia de classe:
+Para acessar atributos ou func√µes de uma inst√¢ncia, use 'inst√¢ncia.atributo_ou_funcao'.
 --------------------------------------------------------------------------------------------------
 
-Bom, estes s„o os comandos do SplatyScript, talvez eu esqueci de mostrar algum, mas estes s„o os principais (-:
+Bom, estes s√£o os comandos do SplatyScript, talvez eu esqueci de mostrar algum, mas estes s√£o os principais (-:
 
 == Bugs e erros:
 
 Quando eu vejo um bug ou erro no meu Script, eu consigo pensar em 3 coisas:
 
-1 - Erro de interpretaÁ„o do interpretador
-2 - Erro de codificaÁ„o/programaÁ„o
+1 - Erro de interpreta√ß√£o do interpretador
+2 - Erro de codifica√ß√£o/programa√ß√£o
 3 - Erro/bug do SplatyScript.
 
 Veja como resolver estes bugs/erros:
 
-1 - Erro de interpretaÁ„o:
-Este erro È bem comum, j· que o interpretador do SplatyScript exige um cÛdigo legÌvel.
-Remova espaÁos desnescess·rios, ou adicione nescess·rios:
+1 - Erro de interpreta√ß√£o:
+Este erro √© bem comum, j√° que o interpretador do SplatyScript exige um c√≥digo leg√≠vel.
+Remova espa√ßos desnescess√°rios, ou adicione nescess√°rios:
 
  Certo: var minhaVar:string=teste
- Errado: var minhavar : string = teste - EspaÁos desnescess·rios
+ Errado: var minhavar : string = teste - Espa√ßos desnescess√°rios
 
  ou
  
  Certo: calc num + 2
- Errado: calc num+2 - Falta espaÁos; No caso o interpretador intende o 'num+2' como uma palavra sÛ.
+ Errado: calc num+2 - Falta espa√ßos; No caso o interpretador intende o 'num+2' como uma palavra s√≥.
 
-2 - Erro de codificaÁ„o/programaÁ„o
-Este erro È bem comum em qualquer linguagem de programaÁ„o:
-Ocorre quando o cÛdigo est· errado/com um erro. O splatyScript n„o executa funÁıes que n„o existem, e nem reclama,
-simplesmente n„o executa. Este erro pode ocorrer devido ao uso de uma:
-- FunÁ„o que n„o existe
-- Vari·vel que n„o existe
-- Classe que n„o existe
+2 - Erro de codifica√ß√£o/programa√ß√£o
+Este erro √© bem comum em qualquer linguagem de programa√ß√£o:
+Ocorre quando o c√≥digo est√° errado/com um erro. O splatyScript n√£o executa fun√ß√µes que n√£o existem, e nem reclama,
+simplesmente n√£o executa. Este erro pode ocorrer devido ao uso de uma:
+- Fun√ß√£o que n√£o existe
+- Vari√°vel que n√£o existe
+- Classe que n√£o existe
 - Etc..
-O que eu geralmente faÁo È:
-Revisar linha por linha, palavra por palavra atÈ achar o erro, ou:
+O que eu geralmente fa√ßo √©:
+Revisar linha por linha, palavra por palavra at√© achar o erro, ou:
 Executar o comando no Terminal do SplatyScript. Ou:
-adicionar linhas com prints, exemplo:(Neste exemplo, o erro ser· uma funÁ„o que n„o existe 'calcule')
+adicionar linhas com prints, exemplo:(Neste exemplo, o erro ser√° uma fun√ß√£o que n√£o existe 'calcule')
 
 ...
 var num:number=0
 calcule num + 3
 println num
-#UÈ: a var. 'num continua sendo 0'
+#U√©: a var. 'num continua sendo 0'
 ...
 
  ->
@@ -182,13 +183,13 @@ var num:number=0
 println num%criada,%calculando
 calcule num + 3
 println num
-#UÈ: a var. 'num continua sendo 0'. Sei que a var num foi criada, pois na tela apareceu 'num criada, calculando'.
+#U√©: a var. 'num continua sendo 0'. Sei que a var num foi criada, pois na tela apareceu 'num criada, calculando'.
 ...
-Ent„o o erro est· em 'calcule', que n„o existe.
+Ent√£o o erro est√° em 'calcule', que n√£o existe.
 
 3 - Erro/bug do SplatyScript
 
-Este È f·cil: Enviar uma mensagem para a Traingames.
-VocÍ pode enviar a mensagem aqui: 'https://traingames.wixsite.com/traingames/contato'.
+Este √© f√°cil: Enviar uma mensagem para a Traingames.
+Voc√™ pode enviar a mensagem aqui: 'https://traingames.wixsite.com/traingames/contato'.
 
-ParabÈns, agora vocÍ j· sabe programar em SplatyScript. F·cil, nÈ? Pois È, o Splaty foi criado para ser f·cil. Boa programaÁ„o!
+Parab√©ns, agora voc√™ j√° sabe programar em SplatyScript. F√°cil, n√©? Pois √©, o Splaty foi criado para ser f√°cil. Boa programa√ß√£o!
