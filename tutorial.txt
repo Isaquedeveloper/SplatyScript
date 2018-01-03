@@ -19,7 +19,7 @@ Exemplo:
 #Isso é um comentário.
 
 -- Ah, e um bug do SplatyScript:
-Quando um erro ocorre, o SplatyScript fala a linha que o erro ocorreu. Ignore est
+Quando um erro ocorre, o SplatyScript fala a linha que o erro ocorreu. Ignore esta linha.
 
     Lista de comandos (Com nível de xp)
 
