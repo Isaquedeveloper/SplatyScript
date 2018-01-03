@@ -134,6 +134,9 @@ Para acessar atributos ou funcões de uma instância, use 'instância.atributo_o
 
 Bom, estes são os comandos do SplatyScript, talvez eu esqueci de mostrar algum, mas estes são os principais (-:
 
+=== Executando meu aplicativo:
+Para executar um arquivo SplatyScript, você deve abrir o arquivo com 'Splaty.exe', localizado em 'C:\Splaty\Splaty.exe'.
+
 == Bugs e erros:
 
 Quando eu vejo um bug ou erro no meu Script, eu consigo pensar em 3 coisas:
