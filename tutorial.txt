@@ -1,198 +1,38 @@
-=========== SplatyScript Language ===========
-SplatyScript, é uma linguagem de programação
-interpretada e orientada-a-objetos com o 
-objetivo de ser fácil de usar. Com poucas
-linhas de código, é possível criar um progra-
-ma completo e avançado.
-Linguagem criada pela Traingames.
-Versão: 0.1-Alpha
--- ATENÇÃO --
-Esta é a primeira verção -- Bugs podem
-ocorrer.
--- Por favor, note que o SplatyScript é uma
-linguagem INTERPRETADA; Facilite a vida do
-interpretador evitando espaços desnescessá-
-rios e inclua espaços quando nescessário.
-=============================================
-Comentários devem iniciar com '#'.
-Exemplo:
-#Isso é um comentário.
+==== SplatyScript ====
+SplatyScript, é uma linguagem de programação Interpretada, 
+e orientada-a-objetos, com o objetivo de ser fácil de programar.
+Com poucas linhas de código, é possível criar um programa 
+avançado e complexo.
+Exemplo (Hello, World):
+print "Hello, World!"
+Fácil, né?
 
--- Ah, e um bug do SplatyScript:
-Quando um erro ocorre, o SplatyScript fala a linha que o erro ocorreu. Ignore esta linha.
+Variáveis:
+myvar="Valor"
 
-    Lista de comandos (Com nível de xp)
+Funções:
+function MyFunction color text
+set_fore_color color
+println text
+endfunc
 
--> Iniciante:
-print - Exibe um texto na tela. Exemplo: print Olá%mundo! Obs: o '%' significa um espaço em branco (' ').
-println - Igual a print, soque gera uma nova linha no final.
-title - Define o título do programa/janela.
-set_cursor_pos - Indica a posição do cursor X Y. Exemeplo: set_cursor_pos 10 15.
-set_fore_color - Indica a cor do texto. A cor deve ser um número de 0 á 15(Cor de 4 bits/16 cores). Exemplo: set_fore_color 3
-set_back_color - Igual a 'set_fore_color', soque dessa vez, a cor de fundo.
-set - Indica o valor de uma variável. Exemplo: set minhaVar valor
-pause - Espera o usuário digitar um texto. Útil para botar no final, para que o programa não feche 'do nada'.
-io_make - Cria um arquivo/pasta. Exemplo: io_make file C:\Splaty\teste.txt TESTE_ARQUIVO
-io_read - Lê um arquivo e passa o valor para uma variável. Exemplo: io_read minhaVar C:\Splaty\Splaty.txt
-beep - Executa um 'Beep'.
+#chamando a função:
+MyFunction 10 "abc... 123..."
 
--> Médio
-import: Importa uma bibliotaca. Exemplo: import Lib.splat
-var - Cria uma variável. Exemplo: 'var nome:tipo=valor'.  Tipos disponíveis:
- - string
- - number
- - _array
- - generic
- - tipos customizados
+Classes e OOP (Object oriented programing ou programação orientada-a-objetos):
 
-================================|
-if e while:                     |
-if - verifica se uma condição   |
-é verdadeira; Se sim, executa   |
-o que está dentro. Ex:          |
-if (minhaVar == ABC)            |
-print É%igual.                  |
-end_if                          |
-while - Igual ao if, soque este |
-é um loop. Ex:                  |
-while (meuNum > 5)              |
-calc meuNum - 1                 |
-end_while                       |
-================================|
+class BaseClass
+Texto="algum texto aqui!!!"
+Cor=4
+endclass
 
-calc - Executa cálculos, para string, number ou generic. Exemplo: 'calc minhaVariavel + 2'
-.'minhaVariavel' irá ter seu valor + 2. Operadores:
- + - Mais/Adição
- - - Menos/Subtração
- * - Vezes/Multiplicação
- / - Divisão
-function - Cria uma função. Exemplo:
- function Soma num1:number,num2:number
- var result:number=num1
- calc result + num2
- return result
- end
-*Para chamar funções:
- Escreva o nome da função com os argumentos (ex:Soma 1 4), ou use o comando 'call'.
+class MainClass derive: BaseClass
+function PrintScreen
+set_fore_color Cor
+println Texto
+endfunc
+endclass
 
-call - Chama uma função pelo nome, podendo ultilizar variáveis. Ex:
-
- println Digite%o%nome%de%uma%função:
- var func:string=read
- call func
-
-ran - Gera um número aleatório. Exemplo: 'ran 8 12 minhaVar'. No caso, ele gera um número aleatório de 8 á 12, e bota o 
-valor na variável 'minhaVar'.
-substring - 'Corta' uma string de um certo começo, com um certo comprimento. Exemplo:
- #Observe os caracteres de str:
- #0123456
- #ABCDEFG
- var str:string=ABCDEFG
- var tmp:string=0
- substring str 2 5 tmp
- #2=startindex(começo), 5=length(comprimento)
- println tmp
-
-->Avançado
-class - Cria uma classe. Exemplo:
- class MinhaClasse
-
- end_class
-der - Deriva de uma classe. Exemplo:
- class Classe1
- var txt:string=TESTE 
- end_class
- 
- class Classe2
- der Classe1
- end_class
-Agora a Classe2 terá os mesmos atributos e funções da Classe1, e mais os seus próprios.
---------------------------------------------------------------------------------------------------
-Arrays:
-Veja como criar um array:
-var meu_array:_array=10
-*o valor do array(no caso 10), será o comprimento dele.
-@ - Para get ou set de um elemento de um array, usamos o @, depois o index(índice).
-Exemplo:
-
-set meu_array@0 Hello
-set meu_array@1 World!
-
-print meu_array@0
-print %
-println meu_array@1
-pause
-
-Criando instancias de classes:
-var instância:Nome_da_classe=0
-Obs: Quando se cria uma instância de uma classe, o valor da variável da instância não importa;pode ser qualquer valor.
-(Eu recomando '0' para deixar o código mais organizado).
-
-Acessando atributos ou funcões de uma instância de classe:
-Para acessar atributos ou funcões de uma instância, use 'instância.atributo_ou_funcao'.
---------------------------------------------------------------------------------------------------
-
-Bom, estes são os comandos do SplatyScript, talvez eu esqueci de mostrar algum, mas estes são os principais (-:
-
-=== Executando meu aplicativo:
-Para executar um arquivo SplatyScript, você deve abrir o arquivo com 'Splaty.exe', localizado em 'C:\Splaty\Splaty.exe'.
-
-== Bugs e erros:
-
-Quando eu vejo um bug ou erro no meu Script, eu consigo pensar em 3 coisas:
-
-1 - Erro de interpretação do interpretador
-2 - Erro de codificação/programação
-3 - Erro/bug do SplatyScript.
-
-Veja como resolver estes bugs/erros:
-
-1 - Erro de interpretação:
-Este erro é bem comum, já que o interpretador do SplatyScript exige um código legível.
-Remova espaços desnescessários, ou adicione nescessários:
-
- Certo: var minhaVar:string=teste
- Errado: var minhavar : string = teste - Espaços desnescessários
-
- ou
- 
- Certo: calc num + 2
- Errado: calc num+2 - Falta espaços; No caso o interpretador intende o 'num+2' como uma palavra só.
-
-2 - Erro de codificação/programação
-Este erro é bem comum em qualquer linguagem de programação:
-Ocorre quando o código está errado/com um erro. O splatyScript não executa funções que não existem, e nem reclama,
-simplesmente não executa. Este erro pode ocorrer devido ao uso de uma:
-- Função que não existe
-- Variável que não existe
-- Classe que não existe
-- Etc..
-O que eu geralmente faço é:
-Revisar linha por linha, palavra por palavra até achar o erro, ou:
-Executar o comando no Terminal do SplatyScript. Ou:
-adicionar linhas com prints, exemplo:(Neste exemplo, o erro será uma função que não existe 'calcule')
-
-...
-var num:number=0
-calcule num + 3
-println num
-#Ué: a var. 'num continua sendo 0'
-...
-
- ->
-
-println Criando%num
-var num:number=0
-println num%criada,%calculando
-calcule num + 3
-println num
-#Ué: a var. 'num continua sendo 0'. Sei que a var num foi criada, pois na tela apareceu 'num criada, calculando'.
-...
-Então o erro está em 'calcule', que não existe.
-
-3 - Erro/bug do SplatyScript
-
-Este é fácil: Enviar uma mensagem para a Traingames.
-Você pode enviar a mensagem aqui: 'https://traingames.wixsite.com/traingames/contato'.
-
-Parabéns, agora você já sabe programar em SplatyScript. Fácil, né? Pois é, o Splaty foi criado para ser fácil. Boa programação!
+instancia=instantiate MainClass
+instancia.Texto="Legal, né?"
+instantia.PrintScreen
