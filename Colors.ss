@@ -14,3 +14,4 @@ red=12
 pink=13
 yellow=14
 white=15
+#SplatyScript color library, by Traingames.
