@@ -23,3 +23,5 @@ endwhile
 submitArray result
 return result
 endfunc
+
+#String tools library, by Traingames
