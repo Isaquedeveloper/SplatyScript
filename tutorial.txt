@@ -36,3 +36,8 @@ endclass
 instancia=instantiate MainClass
 instancia.Texto="Legal, né?"
 instantia.PrintScreen
+
+Importando bibliotecas:
+
+import _sslibs_/NOME_BIBLIOTECA
+#Obs: _sslibs_ = C:\Splaty\Libs
